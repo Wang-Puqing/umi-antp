@@ -1,6 +1,7 @@
 import { defineConfig } from '@umijs/max';
 
 export default defineConfig({
+  mock:false,
   antd: {},
   access: {},
   model: {},
@@ -29,7 +30,15 @@ export default defineConfig({
       path: '/table',
       component: './Table',
     },
+
   ],
   npmClient: 'npm',
+  proxy: {
+    '/api': {
+      'target': 'http://127.0.0.1:7001/',
+      'changeOrigin': true,
+      'pathRewrite': { '^/api' : '' },
+    },
+  },
 });
 
