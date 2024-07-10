@@ -1,0 +1,8 @@
+# PATH=$PATH:/usr/local/bin:/usr/local/sbin
+#!/bin/sh
+# . "$(dirname "$0")/_/husky.sh"
+# 加入下面这行
+# PATH="/usr/local/bin:$PATH"
+# npx --no-install lint-staged --quiet
+
+# npm run lint:staged
