@@ -30,6 +30,12 @@ export default defineConfig({
       path: '/table',
       component: './Table',
     },
+    {
+      name: '用户管理',
+      path: '/userManage',
+      component: './UserManage',
+      access: 'canSeeAdmin',
+    },
 
   ],
   npmClient: 'npm',
